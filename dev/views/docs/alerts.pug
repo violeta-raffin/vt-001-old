@@ -1,0 +1,150 @@
+extends /master.pug
+block content
+	- var currentUrl = 'alerts.html'
+	section
+		.container-fluid
+			.row
+				.col-md-12
+					.row
+						.col-lg-2.col-sm-3.pull-lg-9.pull-md-8
+							//- SIDEBAR
+							include ../includes/sidebar.pug
+						.col-lg-10.col-sm-9.push-lg-3.push-md-4.theme-docs.code-no-bs
+							h1 Bootstrap 4 components
+							hr
+							// Alerts
+							h4 Alerts
+								small 
+									a(href='https://getbootstrap.com/docs/4.1/components/alerts/' target='_blank') (Official docs)
+							p
+								| Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+
+							.panel
+								.panel-body
+									.alert.alert-primary(role='alert')
+										strong Primary!
+										|  This is a primary alert-check it out!
+									.alert.alert-secondary(role='alert')
+										strong Secondary alert!
+										|  This secondary alert is a new addition to the group.
+									.alert.alert-success(role='alert')
+										strong Well done!
+										|  You successfully read this important alert message.
+									.alert.alert-info(role='alert')
+										strong Heads up!
+										|  This alert needs your attention, but it's not super important.
+									.alert.alert-warning(role='alert')
+										strong Warning!
+										|  Better check yourself, you're not looking too good.
+									.alert.alert-danger(role='alert')
+										strong Oh snap!
+										|  Change a few things up and try submitting again.
+									.alert.alert-light(role='alert')
+										strong Light alert!
+										|  This is a light alert-check it out!
+									.alert.alert-dark(role='alert')
+										strong Dark alert!
+										|  This is a light alert-check it out!
+									.alert.alert-inverse(role='alert')
+										strong Inverted!
+										|  This inverse alert is another addition to the group.
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-primary"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Primary!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> This is a primary alert-check it out!
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											br
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-secondary"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Secondary alert!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> This secondary alert is a new addition to the group.
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											br
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-success"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Well done!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> You successfully read this important alert message.
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											br
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-info"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Heads up!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> This alert needs your attention, but it's not super important.
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											br
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-warning"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Warning!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> Better check yourself, you're not looking too good.
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											br
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-danger"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Oh snap!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> Change a few things up and try submitting again.
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											br
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-light"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Light alert!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> This is a light alert-check it out!
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											br
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-dark"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Dark alert!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> This is a light alert-check it out!
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											br
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-inverse"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Inverted!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> This inverse alert is another addition to the group.
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							h4.mt-3
+								| Additional content
+							p.mt-3
+								| Alerts can also contain additional 
+								code .alert-heading
+								|  and 
+								code .alert-link
+								|  for headings and links, plus 
+								code hr
+								|  for spacing.
+							.panel
+								.panel-body
+									.alert.alert-success(role='alert')
+										h4.alert-heading.mt-1 I'm a header!
+										p
+											strong Well done!
+											|  You successfully read this important alert message that 
+											a.alert-link(href='http://spacialtheme.herokuapp.com/2.6/docs/alerts.html#') includes a link
+											| .
+										hr
+										p.mb-0
+											| You can use extra spacing using hr and paragraphs.
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											|<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-success"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-heading"</span>&gt;</span>I'm a header!<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Well done!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> You successfully read this important alert message that <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"alert-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>includes a link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You can use extra spacing using hr and paragraphs.
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+										
+							h4.mt-3
+								| Dismissing alerts
+							p.mt-3
+								| Add a dismiss button and the 
+								code .alert-dismissible
+								|  class, which adds extra padding to the right of the alert and positions the 
+								code .close
+								|  button.
+							p
+								| On the dismiss button, add the 
+								code data-dismiss="alert"
+								|  attribute.
+							.panel
+								.panel-body
+									.alert.alert-info.alert-dismissible.fade.show(role='alert')
+										button.close(type='button', data-dismiss='alert', aria-label='Close')
+											span(aria-hidden='true') ×
+										strong Close me!
+										|  you can click the close button whenever you're ready.
+								.panel-footer
+									pre
+										code.html.hljs.xml            
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+											| <span class="hljs-attr">class</span>=<span class="hljs-string">"alert alert-info alert-dismissible fade show"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"close"</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">"alert"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Close"</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>×<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Close me!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> you can click the close button whenever you're ready.
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

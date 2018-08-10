@@ -1,0 +1,36 @@
+extends /master.pug
+block content
+	- var currentUrl = 'breadcrums.html'
+	section
+		.container-fluid
+			.row
+				.col-md-12
+					.row
+						.col-lg-2.col-sm-3.pull-lg-9.pull-md-8
+							//- SIDEBAR
+							include ../includes/sidebar.pug
+						.col-lg-10.col-sm-9.push-lg-3.push-md-4.theme-docs.code-no-bs
+							h1 Bootstrap 4 components
+							hr
+							// Breadcrums
+							h4 Breadcrums
+								small 
+									a(href='href="https://getbootstrap.com/docs/4.1/components/breadcrumb/' target='_blank') (Official docs)
+							p Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
+							.panel
+								.panel-body
+									nav(aria-label='breadcrumb')
+										ol.breadcrumb
+											li.breadcrumb-item.active(aria-current='page') Home
+									nav(aria-label='breadcrumb')
+										ol.breadcrumb
+											li.breadcrumb-item
+												a(href='#') Home
+											li.breadcrumb-item.active(aria-current='page') Library
+									nav(aria-label='breadcrumb')
+										ol.breadcrumb
+											li.breadcrumb-item
+												a(href='#') Home
+											li.breadcrumb-item
+												a(href='#') Library
+											li.breadcrumb-item.active(aria-current='page') Data

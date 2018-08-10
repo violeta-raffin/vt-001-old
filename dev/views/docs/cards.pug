@@ -1,0 +1,486 @@
+extends /master.pug
+block content
+	- var currentUrl = 'cards.html'
+	section
+		.container-fluid
+			.row
+				.col-md-12
+					.row
+						.col-lg-2.col-sm-3.pull-lg-9.pull-md-8
+							//- SIDEBAR
+							include ../includes/sidebar.pug
+						.col-lg-10.col-sm-9.push-lg-3.push-md-4.theme-docs.code-no-bs
+							h1 Bootstrap 4 components
+							hr
+							// Cards
+							h4 Cards
+								small 
+									a(href='https://getbootstrap.com/docs/4.1/components/card/' target='_blank') (Official docs)	
+							p
+								| Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.
+							p
+								strong About 
+								br 
+								| A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
+							.panel
+								.panel-body
+									.card(style='width: 18rem;')
+										img.card-img-top(src='/docs/img/286x180.svg', alt='Card image cap')
+										.card-body
+											h5.card-title Card title
+											p.card-text
+												| Some quick example text to build on the card title and make up the bulk of the card's content.
+											a.btn.btn-primary(href='#') Go somewhere									
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card w-50"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-img-top img-fluid"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Card title<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>Some quick example text to build on the card title and make up the bulk of the card's content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>Go somewhere<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
+
+							h4.mt-3
+								| Content types
+							h5.mt-4 Blocks
+							p.mt-3
+								| The building block of a card is the 
+								code .card-body
+								| . Use it whenever you need a padded section within a card.
+							h5.mt-4 Titles, text, and links
+							p.mt-3
+								| Card titles are used by adding 
+								code .card-title
+								|  to a <h*> tag. In the same way, links are added and placed next to each other by adding 
+								code .card-link
+								|  to a <a> tag.
+							p
+								| Subtitles are used by adding a 
+								code .card-subtitle
+								|  to a <h*> tag.
+							p
+								| With 
+								code .card-text
+								| , text can be added to the card.
+							h5.mt-4 Images
+							p.mt-3
+								code .card-img-top
+								|  places an image to the top of the card.
+							p
+								code .card-img-bottom
+								|  places an image to the bottom of the card.
+							h5.mt-4 List groups
+							p.mt-3
+								| Create lists of content in a card with a 
+								code ul.list-group.list-group-flush
+								| .
+							.panel
+								.panel-body
+									.card.w-75
+										img.card-img-top.img-fluid(src='/docs/img/card-2.jpg')
+										.card-body
+											h4.card-title.mt-2 Card title
+											h6.card-subtitle.mb-3.text-muted Card subtitle
+											p.card-text
+												| Some quick example text to build on the card title and make up the bulk of the card's content.
+										ul.list-group.list-group-flush
+											li.list-group-item Cras justo odio
+											li.list-group-item Dapibus ac facilisis in
+											li.list-group-item Vestibulum at eros
+										.card-body
+											a.card-link(href='#') Card link
+											a.card-link(href='#') Another link
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											|  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card w-75"</span>&gt;</span>
+											|    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-img-top img-fluid"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span>&gt;</span>
+											|    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title mt-2"</span>&gt;</span>Card title<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|      <span class="hljs-tag">&lt;<span class="hljs-name">h6</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-subtitle mb-3 text-muted"</span>&gt;</span>Card subtitle<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span>
+											|      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>Some quick example text to build on the card title and make up the bulk of the card's content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-group list-group-flush"</span>&gt;</span>
+											|      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-group-item"</span>&gt;</span>Cras justo odio<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+											|      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-group-item"</span>&gt;</span>Dapibus ac facilisis in<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list-group-item"</span>&gt;</span>Vestibulum at eros<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+											|    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+											|    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-link"</span>&gt;</span>Card link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-link"</span>&gt;</span>Another link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+							br
+							h4.mt-3
+								| Header and Footer
+							p.mt-3
+								| Card headers can be styled by either adding 
+								code .card-header
+								|  to <h*> elements or wrapping text in a 
+								code div.card-header
+								| .
+							.panel
+								.panel-body
+									.card
+										h5.card-header
+											| Featured
+										.card-body
+											h4.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+											a.btn.btn-primary(href='#') Go somewhere
+										.card-footer.text-muted
+											| 2 days ago
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-header"</span>&gt;</span>
+											|     Featured
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>Go somewhere<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-footer text-muted"</span>&gt;</span>
+											|     2 days ago
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							br
+							h4.mt-3
+								| Navigation
+							.panel
+								.panel-body
+									.card.text-center
+										.card-header
+											ul.nav.nav-tabs.card-header-tabs
+												li.nav-item
+													a.nav-link.active(href='#', onclick='return false;') Active
+												li.nav-item
+													a.nav-link(href='#', onclick='return false;') Link
+												li.nav-item
+													a.nav-link(href='#', onclick='return false;') Another link
+												li.nav-item
+													a.nav-link.disabled(href='#', onclick='return false;') Disabled
+										.card-body
+											h4.card-title.mt-2 Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+											a.btn.btn-primary.mb-2(href='#') Go somewhere
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card text-center"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-header"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav nav-tabs card-header-tabs"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-link active"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Another link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-item"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-link disabled"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>Go somewhere<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+							br
+							h4.mt-3
+								| Image overlays
+							.panel
+								.panel-body
+									.card.text-white
+										img.card-img(src='/docs/img/card-3.jpg', alt='Card image')
+										.card-img-overlay
+											h4.card-title.mt-5 This is a card title
+											p.card-text
+												| This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. And we're only using it for testing purposes.
+											p.card-text Last updated 3 mins ago
+											button.btn-shadow.btn-shadow-info.mt-3 Go somewhere
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card text-white"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-img"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Card image"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-img-overlay"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title mt-3"</span>&gt;</span>This is a card title<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. And we're only using it for testing purposes.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>Last updated 3 mins ago<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-info mt-3"</span>&gt;</span>Go somewhere<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							br
+							h4.mt-3
+								| Card styles
+							p.mt-3
+								| Cards include various options for customizing their backgrounds, borders, and color.
+							.panel
+								.panel-body
+									.card.bg-dark.text-white.text-center.mb-3
+										.card-body
+											h3.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+									.card.bg-primary.text-white.text-center.mb-3
+										.card-body
+											h3.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+									.card.bg-success.text-white.text-center.mb-3
+										.card-body
+											h3.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+									.card.bg-info.text-white.text-center.mb-3
+										.card-body
+											h3.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+									.card.bg-warning.text-white.text-center.mb-3
+										.card-body
+											h3.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+									.card.bg-danger.text-white.text-center.mb-3
+										.card-body
+											h3.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+									.card.bg-light.text-center
+										.card-body
+											h3.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card bg-dark text-white text-center mb-3"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| 
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card bg-primary text-white text-center mb-3"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card bg-success text-white text-center mb-3"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card bg-info text-white text-center mb-3"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card bg-warning text-white text-center mb-3"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card bg-danger text-white text-center mb-3"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card bg-light text-center"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							br
+							h4.mt-3
+								| Outline cards
+							.panel
+								.panel-body
+									.card.border-primary.mb-3.text-center
+										.card-body
+											h4.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+									.card.border-success.mb-3.text-center
+										.card-body
+											h4.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+									.card.border-info.mb-3.text-center
+										.card-body
+											h4.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+									.card.border-warning.mb-3.text-center
+										.card-body
+											h4.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+									.card.border-danger.text-center
+										.card-body
+											h4.card-title Special title treatment
+											p.card-text With supporting text below as a natural lead-in to additional content.
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card border-primary mb-3 text-center"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card border-success mb-3 text-center"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card border-info mb-3 text-center"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card border-warning mb-3 text-center"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card border-danger text-center"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Special title treatment<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>With supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							br
+							h4.mt-3
+								| Card columns
+							.panel
+								.panel-body
+									.card-columns
+										.card
+											img.card-img-top.img-fluid(src='/docs/card-4.jpg', alt='Card image cap')
+											.card-body
+												h4.card-title Card title that wraps to a new line
+												p.card-text
+													| This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+										.card.p-3
+											blockquote.card-body
+												p
+													| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+												footer
+													small.text-muted
+														| Someone famous in 
+														cite(title='Source Title') Source Title
+										.card
+											.card-body
+												h4.card-title Card title
+												p.card-text This card has supporting text below as a natural lead-in to additional content.
+												p.card-text
+													small.text-muted Last updated 3 mins ago
+										.card.bg-primary.text-white.p-3.text-center
+											blockquote.card-body
+												p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.
+												footer
+													small
+														| Someone famous in 
+														cite(title='Source Title') Source Title
+										.card.text-center
+											.card-body
+												h4.card-title Card title
+												p.card-text This card has supporting text below as a natural lead-in to additional content.
+												p.card-text
+													small.text-muted Last updated 3 mins ago
+										.card
+											img.card-img.img-fluid(src='/docs/card-4.jpg', alt='Card image')
+										.card.p-3.text-right
+											blockquote.card-body
+												p
+													| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+												footer
+													small.text-muted
+														| Someone famous in 
+														cite(title='Source Title') Source Title
+										.card
+											.card-body
+												h4.card-title Card title
+												p.card-text
+													| This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+												p.card-text
+													small.text-muted Last updated 3 mins ago
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-columns"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-img-top img-fluid"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Card image cap"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Card title that wraps to a new line<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card p-3"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-muted"</span>&gt;</span>
+											|           Someone famous in <span class="hljs-tag">&lt;<span class="hljs-name">cite</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Source Title"</span>&gt;</span>Source Title<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Card title<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>This card has supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-muted"</span>&gt;</span>Last updated 3 mins ago<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card bg-primary text-white p-3 text-center"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>
+											|           Someone famous in <span class="hljs-tag">&lt;<span class="hljs-name">cite</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Source Title"</span>&gt;</span>Source Title<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card text-center"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Card title<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>This card has supporting text below as a natural lead-in to additional content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-muted"</span>&gt;</span>Last updated 3 mins ago<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-img img-fluid"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Card image"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card p-3 text-right"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-muted"</span>&gt;</span>
+											|           Someone famous in <span class="hljs-tag">&lt;<span class="hljs-name">cite</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Source Title"</span>&gt;</span>Source Title<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-body"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-title"</span>&gt;</span>Card title<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-text"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-muted"</span>&gt;</span>Last updated 3 mins ago<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

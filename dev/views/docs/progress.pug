@@ -1,0 +1,140 @@
+extends /master.pug
+block content
+	- var currentUrl = 'progress.html'
+	section
+		.container-fluid
+			.row
+				.col-md-12
+					.row
+						.col-lg-2.col-sm-3.pull-lg-9.pull-md-8
+							//- SIDEBAR
+							include ../includes/sidebar.pug
+						.col-lg-10.col-sm-9.push-lg-3.push-md-4.theme-docs.code-no-bs
+							h1 Bootstrap 4 components
+							hr
+							// Progress
+							h4 Progress
+								small 
+									a(href='https://getbootstrap.com/docs/4.1/components/progress/' target='_blank') (Official docs)
+							p 
+								| Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+
+							.panel
+								.panel-body
+									.progress.mb-2
+										.progress-bar(role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100')
+									.progress.mb-2
+										.progress-bar.w-25(role='progressbar', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+									.progress.mb-2
+										.progress-bar.w-50(role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+									.progress.mb-2
+										.progress-bar.w-75(role='progressbar', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+									.progress
+										.progress-bar.w-100(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100')
+									br
+									.progress.mb-2.mt-3
+										.progress-bar.w-25(role='progressbar', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 25%
+									.progress.mb-2
+										.progress-bar.w-50(role='progressbar', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 50%
+									.progress.mb-2
+										.progress-bar.w-75(role='progressbar', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 75%
+									.progress
+										.progress-bar.w-100(role='progressbar', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 100%
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar w-25"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar w-50"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar w-75"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"75"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar w-100"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar w-25"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>25%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar w-50"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>50%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar w-75"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"75"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>75%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar w-100"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>100%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							.panel
+								.panel-body
+									h4
+										| Bar height
+									.progress.mb-4
+										.progress-bar.w-50(style='height: 1px;', role='progressbar', aria-valuenow='0', aria-valuemin='0', aria-valuemax='100')
+									.progress.mb-3
+										.progress-bar.w-75(style='height: 15px;', role='progressbar', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+									.progress
+										.progress-bar.w-100(style='height: 25px;', role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar w-50"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height: 1px;"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar w-75"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height: 15px;"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar w-100"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height: 25px;"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							
+							.panel
+								.panel-body
+									h4
+										| Backgrounds
+									.progress.mb-2
+										.progress-bar.bg-success.w-25(role='progressbar', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 25%
+									.progress.mb-2
+										.progress-bar.bg-info.w-50(role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100') 50%
+									.progress.mb-2
+										.progress-bar.bg-warning.w-75(role='progressbar', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100') 75%
+									.progress
+										.progress-bar.bg-danger.w-100(role='progressbar', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100') 100%
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-success w-25"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"25"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>25%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-info w-50"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>50%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-warning w-75"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"75"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>75%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar bg-danger w-100"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>100%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							.panel
+								.panel-body
+									h4
+										| Animated bars
+									.progress.mb-2
+										.progress-bar.progress-bar-striped.progress-bar-animated.w-50(role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100') 50%
+									.progress
+										.progress-bar.progress-bar-striped.progress-bar-animated.bg-info.w-75(role='progressbar', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100') 75%
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar progress-bar-striped progress-bar-animated w-50"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"50"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>50%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar progress-bar-striped progress-bar-animated bg-info w-75"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"75"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span>75%<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

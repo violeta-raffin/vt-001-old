@@ -1,0 +1,90 @@
+extends /master.pug
+block content
+	- var currentUrl = 'carousel.html'
+	section
+		.container-fluid
+			.row
+				.col-md-12
+					.row
+						.col-lg-2.col-sm-3.pull-lg-9.pull-md-8
+							//- SIDEBAR
+							include ../includes/sidebar.pug
+						.col-lg-10.col-sm-9.push-lg-3.push-md-4.theme-docs.code-no-bs
+							h1 Bootstrap 4 components
+							hr
+							// Carousel
+							h4 Carousel
+								small 
+									a(href='https://getbootstrap.com/docs/4.1/components/carousel/' target='_blank') (Official docs)
+							p
+								| Carousel implementation example
+							.panel
+								.panel-body
+									#carouselExampleIndicators.carousel.slide(data-ride='carousel')
+										ol.carousel-indicators
+											li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+											li(data-target='#carouselExampleIndicators', data-slide-to='1')
+											li(data-target='#carouselExampleIndicators', data-slide-to='2')
+										.carousel-inner(role='listbox')
+											.carousel-item.active
+												img.d-block.img-fluid(src='/docs/img/carousel-1.jpg', alt='First slide')
+												.carousel-caption.d-none.d-md-block
+													h2 Slide 1 title
+													p Slide 1 subtitle text
+											.carousel-item
+												img.d-block.img-fluid(src='/docs/img/carousel-2.jpg', alt='Second slide')
+												.carousel-caption.d-none.d-md-block
+													h2 Slide 2 title
+													p Slide 2 subtitle text
+											.carousel-item
+												img.d-block.img-fluid(src='/docs/img/carousel-3.jpg', alt='Third slide')
+												.carousel-caption.d-none.d-md-block
+													h2 Slide 3 title
+													p Slide 3 subtitle text
+										a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+											span.carousel-control-prev-icon(aria-hidden='true')
+											span.sr-only Previous
+										a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+											span.carousel-control-next-icon(aria-hidden='true')
+											span.sr-only Next
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"carouselExampleIndicators"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel slide"</span> <span class="hljs-attr">data-ride</span>=<span class="hljs-string">"carousel"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-indicators"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#carouselExampleIndicators"</span> <span class="hljs-attr">data-slide-to</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"active"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#carouselExampleIndicators"</span> <span class="hljs-attr">data-slide-to</span>=<span class="hljs-string">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#carouselExampleIndicators"</span> <span class="hljs-attr">data-slide-to</span>=<span class="hljs-string">"2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-inner"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"listbox"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-item active"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-block img-fluid"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"First slide"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-caption d-none d-md-block"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Slide 1 title<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Slide 1 subtitle text<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-item"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-block img-fluid"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Second slide"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-caption d-none d-md-block"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Slide 2 title<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Slide 2 subtitle text<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-item"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"d-block img-fluid"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Third slide"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-caption d-none d-md-block"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Slide 3 title<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Slide 3 subtitle text<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-control-prev"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#carouselExampleIndicators"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-slide</span>=<span class="hljs-string">"prev"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-control-prev-icon"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-control-next"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#carouselExampleIndicators"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">data-slide</span>=<span class="hljs-string">"next"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"carousel-control-next-icon"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

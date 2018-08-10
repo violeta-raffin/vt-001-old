@@ -1,0 +1,456 @@
+extends /master.pug
+block content
+	- var currentUrl = 'tables.html'
+	section
+		.container-fluid
+			.row
+				.col-md-12
+					.row
+						.col-lg-2.col-sm-3.pull-lg-9.pull-md-8
+							//- SIDEBAR
+							include ../includes/sidebar.pug
+						.col-lg-10.col-sm-9.push-lg-3.push-md-4.theme-docs.code-bs
+							h1 Bootstrap 4 components
+							hr
+							// Tables
+							h4 Tables
+								small 
+									a(href='https://getbootstrap.com/docs/4.1/content/tables/' target='_blank') (Official docs)
+							.panel
+								.panel-body
+									h5 Basic Table
+									table.table
+										thead
+											tr
+												th(scope='col') #
+												th(scope='col') First
+												th(scope='col') Last
+												th(scope='col') Handle
+										tbody
+											tr
+												th(scope='row') 1
+												td Mark
+												td Otto
+												td @mdo
+											tr
+												th(scope='row') 2
+												td Jacob
+												td Thornton
+												td @fat
+											tr
+												th(scope='row') 3
+												td Larry
+												td the Bird
+												td @twitter
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+											|   <span class="nt">&lt;thead&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/thead&gt;</span>
+											|   <span class="nt">&lt;tbody&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/tbody&gt;</span>
+											| <span class="nt">&lt;/table&gt;</span>
+
+
+							.panel
+								.panel-body
+									p You can also invert the colors—with light text on dark backgrounds—with 
+										code .table-dark
+									table.table.table-dark
+										thead
+											tr
+												th(scope='col') #
+												th(scope='col') First
+												th(scope='col') Last
+												th(scope='col') Handle
+										tbody
+											tr
+												th(scope='row') 1
+												td Mark
+												td Otto
+												td @mdo
+											tr
+												th(scope='row') 2
+												td Jacob
+												td Thornton
+												td @fat
+											tr
+												th(scope='row') 3
+												td Larry
+												td the Bird
+												td @twitter
+
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-dark"</span><span class="nt">&gt;</span>
+											|   <span class="nt">&lt;thead&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/thead&gt;</span>
+											|   <span class="nt">&lt;tbody&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/tbody&gt;</span>
+											| <span class="nt">&lt;/table&gt;</span>
+							.panel
+								.panel-body
+									h5 Table head options
+									p Similar to tables and dark tables, use the modifier classes .thead-light or .thead-dark to make 
+										code.highlighter-rouge 
+											| <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><thead>s 
+										| appear light or dark gray.
+									table.table
+										thead.thead-dark
+											tr
+												th(scope='col') #
+												th(scope='col') First
+												th(scope='col') Last
+												th(scope='col') Handle
+										tbody
+											tr
+												th(scope='row') 1
+												td Mark
+												td Otto
+												td @mdo
+											tr
+												th(scope='row') 2
+												td Jacob
+												td Thornton
+												td @fat
+											tr
+												th(scope='row') 3
+												td Larry
+												td the Bird
+												td @twitter
+									table.table
+										thead.thead-light
+											tr
+												th(scope='col') #
+												th(scope='col') First
+												th(scope='col') Last
+												th(scope='col') Handle
+										tbody
+											tr
+												th(scope='row') 1
+												td Mark
+												td Otto
+												td @mdo
+											tr
+												th(scope='row') 2
+												td Jacob
+												td Thornton
+												td @fat
+											tr
+												th(scope='row') 3
+												td Larry
+												td the Bird
+												td @twitter
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+											|   <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"thead-dark"</span><span class="nt">&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/thead&gt;</span>
+											|   <span class="nt">&lt;tbody&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/tbody&gt;</span>
+											| <span class="nt">&lt;/table&gt;</span>
+											br
+											| <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+											|   <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"thead-light"</span><span class="nt">&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/thead&gt;</span>
+											|   <span class="nt">&lt;tbody&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/tbody&gt;</span>
+											| <span class="nt">&lt;/table&gt;</span>
+							.panel
+								.panel-body
+									h5 Striped rows
+									p Use 
+										code .table-striped 
+										| to add zebra-striping to any table row within the 
+										code.highlighter-rouge 
+											| <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span><thead>
+									table.table.table-striped
+										thead
+											tr
+												th(scope='col') #
+												th(scope='col') First
+												th(scope='col') Last
+												th(scope='col') Handle
+										tbody
+											tr
+												th(scope='row') 1
+												td Mark
+												td Otto
+												td @mdo
+											tr
+												th(scope='row') 2
+												td Jacob
+												td Thornton
+												td @fat
+											tr
+												th(scope='row') 3
+												td Larry
+												td the Bird
+												td @twitter
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped"</span><span class="nt">&gt;</span>
+											|   <span class="nt">&lt;thead&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/thead&gt;</span>
+											|   <span class="nt">&lt;tbody&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/tbody&gt;</span>
+											| <span class="nt">&lt;/table&gt;</span>
+							.panel
+								.panel-body
+									h5 Dark Striped rows
+									p Use 
+										code .table-striped
+										| and 
+										code .table-dark 
+										| to add dark zebra-striping to any table row within the 
+										code.highlighter-rouge 
+											| <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span><thead>
+									table.table.table-striped.table-dark
+										thead
+											tr
+												th(scope='col') #
+												th(scope='col') First
+												th(scope='col') Last
+												th(scope='col') Handle
+										tbody
+											tr
+												th(scope='row') 1
+												td Mark
+												td Otto
+												td @mdo
+											tr
+												th(scope='row') 2
+												td Jacob
+												td Thornton
+												td @fat
+											tr
+												th(scope='row') 3
+												td Larry
+												td the Bird
+												td @twitter
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped table-dark"</span><span class="nt">&gt;</span>
+											|   <span class="nt">&lt;thead&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>First<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Handle<span class="nt">&lt;/th&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/thead&gt;</span>
+											|   <span class="nt">&lt;tbody&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Mark<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Otto<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@mdo<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Jacob<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Thornton<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@fat<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|     <span class="nt">&lt;tr&gt;</span>
+											|       <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/th&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>the Bird<span class="nt">&lt;/td&gt;</span>
+											|       <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
+											|     <span class="nt">&lt;/tr&gt;</span>
+											|   <span class="nt">&lt;/tbody&gt;</span>
+											| <span class="nt">&lt;/table&gt;</span>
+							.panel
+								.panel-body
+									h5 Responsive tables
+									p 
+										| Responsive tables allow tables to be scrolled horizontally with ease. 
+										br
+										| Make any table responsive across all viewports by wrapping a 
+										code .table with 
+										code .table-responsive. 
+										br
+										| Or, pick a maximum breakpoint with which to have a responsive table up to by using 
+										code .table-responsive{-sm|-md|-lg|-xl}.
+									.table-responsive
+										table.table
+											thead
+												tr
+													th(scope='col') #
+													th(scope='col') Heading
+													th(scope='col') Heading
+													th(scope='col') Heading
+													th(scope='col') Heading
+													th(scope='col') Heading
+													th(scope='col') Heading
+													th(scope='col') Heading
+													th(scope='col') Heading
+													th(scope='col') Heading
+											tbody
+												tr
+													th(scope='row') 1
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+												tr
+													th(scope='row') 2
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+												tr
+													th(scope='row') 3
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+													td Cell
+
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
+											|   <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+											|     ...
+											|   <span class="nt">&lt;/table&gt;</span>
+											| <span class="nt">&lt;/div&gt;</span>

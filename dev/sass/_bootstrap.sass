@@ -1,0 +1,351 @@
+// General Styles -
+//-------------------------------------------------
+.badge
+	padding: 8px
+	font-size: 85%
+	border-radius: 1px
+	margin: 3px
+
+.badge-primary,.btn-primary
+	color: $primary
+	background-color: #d0efef
+	border: 1px solid #d0efef
+	hr
+		border-top: 1px solid $primary
+.badge-secondary,.btn-secondary
+	color: $secondary
+	background-color: #f0e6fb
+	border: 1px solid #f0e6fb
+	hr
+		border-top: 1px solid $secondary
+.badge-success,.btn-success
+	color: $success
+	background-color: #cde0ec
+	border: 1px solid #cde0ec
+	hr
+		border-top: 1px solid $success
+.badge-danger,.btn-danger
+	color: $danger
+	background-color: #f5d8db
+	border: 1px solid #f5d8db
+	hr
+		border-top: 1px solid $danger
+.badge-warning,.btn-warning
+	color: $warning
+	background-color: #fffae6
+	border: 1px solid #fffae6
+	hr
+		border-top: 1px solid $warning
+.badge-info,.btn-info
+	color: $info
+	background-color: #ceead3
+	border: 1px solid #ceead3
+	hr
+		border-top: 1px solid $info
+.badge-light,.btn-light
+	color: $dark
+	background-color: #ffffff
+	border: 1px solid $dark
+	hr
+		border-top: 1px solid $light
+.badge-dark,.btn-dark
+	color: $dark
+	background-color: #eaeaea
+	border: 1px solid #eaeaea
+	hr
+		border-top: 1px solid $dark
+.badge-pill, .btn-pill
+	padding: 8px
+	border-radius: 15px 15px 1px 15px
+.badge-outline 
+	background-color: transparent
+
+// Alerts
+//-------------------------------------------------
+.alert
+	border-color: #ffffff
+	border-radius: 0
+	.alert-heading
+		font-family: $font2
+		font-size: 3rem
+	p
+		font-family: $font1
+		font-size: 1rem
+
+.alert-primary
+	color: $primary
+	background-color: #d0efef
+	border-bottom: 1px solid $primary
+	hr
+		border-top: 1px solid $primary
+.alert-secondary
+	color: $secondary
+	background-color: #f0e6fb
+	border-bottom: 1px solid $secondary
+	hr
+		border-top: 1px solid $secondary
+.alert-success
+	color: $success
+	background-color: #cde0ec
+	border-bottom: 1px solid $success
+	hr
+		border-top: 1px solid $success
+.alert-danger
+	color: $danger
+	background-color: #f5d8db
+	border-bottom: 1px solid $danger
+	hr
+		border-top: 1px solid $danger
+.alert-warning
+	color: $warning
+	background-color: #fffae6
+	border-bottom: 1px solid $warning
+	hr
+		border-top: 1px solid $warning
+.alert-info
+	color: $info
+	background-color: #ceead3
+	border-bottom: 1px solid $info
+	hr
+		border-top: 1px solid $info
+.alert-light
+	color: $dark
+	background-color: $light
+	border-bottom: 1px solid $dark
+	hr
+		border-top: 1px solid $light
+.alert-dark
+	color: #eaeaea
+	background-color: $dark
+	border-bottom: 1px solid $dark
+	hr
+		border-top: 1px solid $dark
+
+// Buttons
+//-------------------------------------------------
+.btn
+	border-radius: 0
+
+.btn-primary
+	box-shadow: 2px 2px $primary
+	font-size: 1.2rem
+	padding: 1px 30px
+	&:hover,&:focus,&:active
+		color: $primary
+		background: #f9f9f9
+		border: 1px solid $primary
+		box-shadow: 1px 1px $primary
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle
+	background-color: #000000
+	color: #ffffff
+	border: 1px solid #ffffff
+
+.btn-secondary
+	box-shadow: 3px 3px $secondary
+	border-radius: 0
+	font-size: 1.2rem
+	padding: 1px 30px
+	&:hover,&:focus,&:active
+		color: $secondary
+		background: #f9f9f9
+		border: 1px solid $secondary
+		box-shadow: 1px 1px $secondary
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle
+	background-color: #ffffff
+	color: $secondary
+	border: 1px solid $secondary
+
+.btn-success
+	box-shadow: 3px 3px $success
+	border-radius: 0
+	font-size: 1.2rem
+	padding: 1px 30px
+	&:hover,&:focus,&:active
+		color: $success
+		background: #f9f9f9
+		border: 1px solid $success
+		box-shadow: 1px 1px $success
+
+.btn-success:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle
+	background-color: #ffffff
+	color: $success
+	border: 1px solid $success
+
+.btn-danger
+	box-shadow: 1px 1px $danger
+	border-radius: 0
+	font-size: 1.2rem
+	padding: 1px 30px
+	&:hover,&:focus,&:active
+		color: $danger
+		background: #f9f9f9
+		border: 1px solid $danger
+		box-shadow: 1px 1px $danger
+
+.btn-danger:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle
+	background-color: #ffffff
+	color: $danger
+	border: 1px solid $danger
+
+//-------------------------------------------------btn-outline
+
+.btn-outline-primary
+	background-color: transparent
+	color: $primary
+	border: 1px solid $primary
+	padding: 8px
+	border-radius: 15px 15px 1px 15px 
+	&:hover
+		background-color: $primary
+		border-color: $primary
+
+.btn-outline-secondary
+	background-color: transparent
+	color: $secondary
+	border: 1px solid $secondary
+	padding: 8px
+	border-radius: 15px 15px 1px 15px 
+	&:hover
+		background-color: $secondary
+		border-color: $secondary
+
+.btn-outline-success
+	background-color: transparent
+	color: $success
+	border: 1px solid $success
+	padding: 8px
+	border-radius: 15px 15px 1px 15px 
+	&:hover
+		background-color: $success
+		border-color: $success
+.btn-outline-danger
+	background-color: transparent
+	color: $danger
+	border: 1px solid $danger
+	padding: 8px
+	border-radius: 15px 15px 1px 15px 
+	&:hover
+		background-color: $danger
+		border-color: $danger
+.btn-outline-warning
+	background-color: transparent
+	color: $warning
+	border: 1px solid $warning
+	padding: 8px
+	border-radius: 15px 15px 1px 15px 
+	&:hover
+		background-color: $warning
+		border-color: $warning
+.btn-outline-info
+	background-color: transparent
+	color: $info
+	border: 1px solid $info
+	padding: 8px
+	border-radius: 15px 15px 1px 15px 
+	&:hover
+		background-color: $info
+		border-color: $info
+.btn-outline-light
+	background-color: transparent
+	color: $dark
+	border: 1px solid $dark
+	padding: 8px
+	border-radius: 15px 15px 1px 15px 
+	&:hover
+		color: $light
+		background-color: $dark
+		border-color: $dark
+.btn-outline-dark
+	background-color: transparent
+	color: $light
+	border: 1px solid $light
+	padding: 8px
+	border-radius: 15px 15px 1px 15px 
+	&:hover
+		background-color: $dark
+		border-color: $dark
+
+
+// Cards
+//-------------------------------------------------
+
+.card
+	padding: 10px
+	border: 0
+	background-color: transparent
+	padding: 0
+	.card-img-top
+		transition: all .5s ease 0s
+		&:hover
+			cursor: pointer
+	.card-body
+		border: 0
+		background-color: #ffffff
+		text-align: center
+		.card-link
+			background: #cccccc
+		
+		.card-list
+			li
+				border-bottom: 1px solid #ccc
+				text-align: center
+				padding: 10px 5px
+
+
+// Forms
+//-------------------------------------------------
+.input-group
+	input,.input-group-text
+		border-radius: 0
+
+input.line-input
+	background: 0
+	border: 0
+	border-bottom: 1px solid #ffffff
+	border-left: 1px solid #ffffff
+	box-shadow: 0 0 transparent
+	color: #fff !important
+
+.form-group
+	color: $strong
+	input, textarea
+		border-bottom: 1px solid $strong
+
+// Placeholder
+//-------------------------------------------------
+$placeholder: $medium
+.form-control::-webkit-input-placeholder
+	color: $placeholder
+.form-control:-moz-placeholder
+	color: $placeholder
+.form-control::-moz-placeholder
+	color: $placeholder
+.form-control:-ms-input-placeholder
+	color: $placeholder
+.form-control::-ms-input-placeholder
+	color: $placeholder
+
+
+
+// Breadcrum
+//-------------------------------------------------
+.breadcrumb
+	border-radius: 0
+	background-color: $basic
+	border-bottom: 1px solid $medium
+	.breadcrumb-item
+		a
+			color: $medium
+		&:before
+			content: "• "
+			color: $medium
+	.active
+		color: $strong
+		&:before
+			content: "• "
+			color: $medium
+
+
+

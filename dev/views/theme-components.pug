@@ -1,0 +1,128 @@
+extends master.pug
+block content
+    section
+        .container
+            .row
+                .col-md-12
+                    .udl-big-title
+                        span THEME COMPONENTS
+                        h5.s-font ▹ Responsive Carousel
+                        hr.light-br
+                .col-md-12
+                    .owl-carousel.carousel-multiple
+                        - var multicarousel = [['img/gallery1.jpg', 'Javier Andrad', 'CHEFF INCHARGE', 'libero ex dapibus diam expound the actual teachings of the great explorer'],['img/gallery2.jpg', 'Francis MadMan', 'CHEFF', 'libero ex dapibus diam expound the actual teachings of the great explorer'],['img/gallery3.jpg', 'Gato Dumas', 'CHEFF', 'libero ex dapibus diam expound the actual teachings of the great explorer'],['img/gallery4.jpg', 'Peter Quill', 'CHEFF', 'libero ex dapibus diam expound the actual teachings of the great explorer'],['img/gallery5.jpg', 'Rocket Rackoon', 'EXPERT', 'libero ex dapibus diam expound the actual teachings of the great explorer']]
+                        each multicdata in multicarousel
+                            .inner
+                                img(src=multicdata[0] alt='Carousel Item')
+                                h3 #{multicdata[1]}
+                                span.text-deco-1 #{multicdata[2]}
+                                p #{multicdata[3]}
+                                ul
+                                    li.sq-icon
+                                        i.fab.fa-facebook-square
+                                    li.sq-icon
+                                        i.fab.fa-twitter-square
+                                    li.sq-icon
+                                        i.fab.fa-instagram
+                .col-md-12
+                    h5.s-font ▹ Tipography
+                    hr.light-br
+                // Headings
+                .col-md-6.col-lg-6
+                    h6.font-3.text-muted ○ Headings
+                    h1 1 - Heading
+                    h2 H2 - Heading
+                    h3 H3 - Heading
+                    h4 H4 - Heading
+                    h5 H5 - Heading
+                    h6 H6 - Heading
+                .col-md-6.col-lg-6
+                    // Parragraphs
+                    h6.s-font.text-muted ○ Parragraph
+                    p
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere adipisci veniam, animi fugiat est quasi repudiandae eius
+                        | vitae dolore voluptas quis molestiae inventore libero maxime beatae id enim porro amet.
+                    p.font-3
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere adipisci veniam, animi fugiat est quasi repudiandae eius
+                        | vitae dolore voluptas quis molestiae inventore libero maxime beatae id enim porro amet.
+                    // Special Subtitles
+                    h6.font-3.text-muted ○ Special Subtitle
+                    span.text-deco-1 NICE SUBTITLE
+                hr
+                .col-md-6.col-lg-6
+                    // Buttons
+                    h6.font-3.text-muted ○ Buttons
+                    button.btn.btn-primary Primary Button
+                    button.btn.btn-secondary Secondary Button
+                .col-md-6.col-lg-6
+                    // Ornaments
+                    h6.font-3.text-muted ○ Ornaments
+                    img(src='img/divisor.png', alt='Divisor' style="padding: 10px") 
+                    br
+                    img(src='img/divisor-w.png', alt='Divisor' style="background: #ccc; padding: 10px") 
+                     
+    
+    section.grey-bg
+        .container
+            .row
+                .col-xs-6.col-sm-6.col-md-4.col-lg-3
+                    h4.text-center Card
+                    .item.card
+                        img(src='img/gallery1.jpg' alt='Card image cap').card-img-top
+                        .card-body
+                            h4.card-title Test
+                            span.text-deco-1 $ 150 .-
+                            p.card-text Some quick example text to build on the card title.
+                            a.btn.btn-primary(href='#') Order now
+                .col-xs-6.col-sm-6.col-md-8.col-lg-9
+                    .row
+                        .col-12
+                            h4.text-center Form components
+                            .row
+                                .col-md-5
+                                    .form-demo.text-center
+                                        form(action='send-mail.php' method='POST')
+                                        .form-group
+                                            input.form-control(type='name' aria-describedby='emailHelp' placeholder='Your Name')
+                                        .form-group
+                                            input.form-control(type='email' aria-describedby='emailHelp' placeholder='Your E-mail')
+                                        .form-group
+                                            input.form-control(type='phone' placeholder='Phone')
+                                        .form-group
+                                            textarea#exampleFormControlTextarea1.form-control(name='message' rows='3' placeholder='Leave us a message')
+                                        small.form-text.text-muted We&apos;ll never share your data with anyone else.
+                                        button.btn.btn-primary(type='submit') Submit
+                                .col-md-6
+                                    .form-demo.text-center
+                                        form
+                                            .form-group
+                                                label(for='exampleFormControlFile1') Example label
+                                                input#exampleFormControlFile1.form-control-file(type='file')
+                                            .form-group
+                                                label(for='exampleFormControlFile1') Select
+                                                select#exampleFormControlSelect1.form-control
+                                                    option 1
+                                                    option 2
+                                                    option 3
+                                                    option 4
+                                                    option 5
+                                            .form-check
+                                                input#defaultCheck1.form-check-input(type='checkbox', value='')
+                                                label.form-check-label(for='defaultCheck1')
+                                                    | Default checkbox
+                                            .form-check
+                                                input#defaultCheck2.form-check-input(type='checkbox', value='', disabled='')
+                                                label.form-check-label(for='defaultCheck2')
+                                                    | Disabled checkbox
+                                            .form-check
+                                                input#exampleRadios1.form-check-input(type='radio', name='exampleRadios', value='option1', checked='')
+                                                label.form-check-label(for='exampleRadios1')
+                                                    | Default radio
+                                            .form-check
+                                                input#exampleRadios2.form-check-input(type='radio', name='exampleRadios', value='option2')
+                                                label.form-check-label(for='exampleRadios2')
+                                                    | Second default radio
+                                            .form-check.disabled
+                                                input#exampleRadios3.form-check-input(type='radio', name='exampleRadios', value='option3', disabled='')
+                                                label.form-check-label(for='exampleRadios3')
+                                                    | Disabled radio

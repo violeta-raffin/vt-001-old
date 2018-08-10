@@ -1,0 +1,32 @@
+//- Side Menu
+.padding-top-3x.hidden-md-up.docs-sidebar
+    nav.list-group
+        //- Links Array = ['Url', 'Link Name']
+        -
+            var links = [
+                ['alerts.html', 'Alerts'],
+                ['badges.html', 'Badges'],
+                ['breadcrums.html', 'Breadcrums'],
+                ['buttons.html', 'Buttons'],
+                ['buttons-group.html', 'Buttons Group'],
+                ['cards.html', 'Cards'],
+                ['carousel.html', 'Carousel'],
+                ['collapse.html', 'Collapse'],
+                ['dropdown.html', 'Dropdown'],
+                ['layout.html', 'Layout'],
+                ['forms.html', 'Forms'],
+                ['input-group.html', 'Input Group'],
+                ['icons.html', 'Icons'],
+                ['list-group.html', 'List Group'],
+                ['modal.html', 'Modal'],
+                ['navs.html', 'Navs'],
+                ['nav-bar.html', 'NavBar'],
+                ['progress.html', 'Progress'],
+                ['jumbotron.html', 'Jumbotron'],
+                ['pop-over.html', 'Pop Over'],
+                ['tables.html', 'Tables'],
+            ];
+        //- Render Links
+        each link in links
+            a.list-group-item.list-group-item-action(class={active: currentUrl === link[0]} href=link[0]) #{link[1]}
+            

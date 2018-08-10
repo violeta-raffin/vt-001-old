@@ -1,0 +1,100 @@
+extends /master.pug
+block content
+	- var currentUrl = 'pop-over.html'
+	section
+		.container-fluid
+			.row
+				.col-md-12
+					.row
+						.col-lg-2.col-sm-3.pull-lg-9.pull-md-8
+							//- SIDEBAR
+							include ../includes/sidebar.pug
+						.col-lg-10.col-sm-9.push-lg-3.push-md-4.theme-docs.code-bs
+							h1 Bootstrap 4 components
+							hr
+							// Pop Over
+							h4 Popovers
+								small 
+									a(href='https://getbootstrap.com/docs/4.1/components/popovers/' target='_blank') (Official docs)
+							p 
+								| Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
+							h5 Overview
+							ul.vertical-list
+								li Things to know when using the popover plugin:
+								li Popovers rely on the 3rd party library Popper.js for positioning. You must include popper.min.js before bootstrap.js or use bootstrap.bundle.min.js / bootstrap.bundle.js which contains Popper.js in order for popovers to work!
+								li Popovers require the tooltip plugin as a dependency.
+								li If you’re building our JavaScript from source, it requires util.js.
+								li Popovers are opt-in for performance reasons, so you must initialize them yourself.
+								li Zero-length title and content values will never show a popover.
+								li Specify container: 'body' to avoid rendering problems in more complex components (like our input groups, button groups, etc).
+								li Triggering popovers on hidden elements will not work.
+								li Popovers for .disabled or disabled elements must be triggered on a wrapper element.
+								li When triggered from anchors that wrap across multiple lines, popovers will be centered between the anchors’ overall width. Use white-space: nowrap; on your <a>s to avoid this behavior.
+								li Popovers must be hidden before their corresponding elements have been removed from the DOM.
+							.panel
+								.panel-body
+									h5 Example: Enable popovers everywhere
+									p One way to initialize all popovers on a page would be to select them by their data-toggle attribute:
+								.panel-footer
+									pre
+										code.html.hljs.xml.code-bs
+											| <code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+											|   <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-toggle="popover"]'</span><span class="p">).</span><span class="nx">popover</span><span class="p">()</span>
+											| <span class="p">})</span></code>
+							.panel
+								.panel-body
+									h5 Example: Using the container option
+									p When you have some styles on a parent element that interfere with a popover, you’ll want to specify a custom container so that the popover’s HTML appears within that element instead.
+								.panel-footer
+									pre
+										code.html.hljs.xml.code-bs
+											| <span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+											|   <span class="nx">$</span><span class="p">(</span><span class="s1">'.example-popover'</span><span class="p">).</span><span class="nx">popover</span><span class="p">({</span>
+											|     <span class="na">container</span><span class="p">:</span> <span class="s1">'body'</span>
+											|   <span class="p">})</span>
+											| <span class="p">})</span>
+							.panel
+								.panel-body
+									h5 Example:
+									button.btn.btn-lg.btn-danger(type='button', data-toggle='popover', title='', data-content="And here's some amazing content. It's very engaging. Right?", data-original-title='Popover title') Click to toggle popover
+								.panel-footer
+								
+									pre
+										code.html.hljs.xml
+											| <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-danger"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">title=</span><span class="s">"Popover title"</span> <span class="na">data-content=</span><span class="s">"And here's some amazing content. It's very engaging. Right?"</span><span class="nt">&gt;</span>Click to toggle popover<span class="nt">&lt;/button&gt;</span>
+							.panel
+								.panel-body
+									h5 Four directions
+									p Four options are available: top, right, bottom, and left aligned.
+									.bd-example-popovers
+										button.btn.btn-secondary(type='button', data-container='body', data-toggle='popover', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', data-original-title='', title='', aria-describedby='popover563637')
+											| Popover on top
+										button.btn.btn-secondary(type='button', data-container='body', data-toggle='popover', data-placement='right', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', data-original-title='', title='')
+											| Popover on right
+										button.btn.btn-secondary(type='button', data-container='body', data-toggle='popover', data-placement='bottom', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', data-original-title='', title='')
+											| Popover on bottom
+										button.btn.btn-secondary(type='button', data-container='body', data-toggle='popover', data-placement='left', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.', data-original-title='', title='')
+											| Popover on left
+
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"top"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+											|   Popover on top
+											| <span class="nt">&lt;/button&gt;</span>
+											br
+											| <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"right"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+											|   Popover on right
+											| <span class="nt">&lt;/button&gt;</span>
+											br
+											| <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"bottom"</span> <span class="na">data-content=</span><span class="s">"Vivamus
+											| sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+											|   Popover on bottom
+											| <span class="nt">&lt;/button&gt;</span>
+											br
+											| <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span> <span class="na">data-container=</span><span class="s">"body"</span> <span class="na">data-toggle=</span><span class="s">"popover"</span> <span class="na">data-placement=</span><span class="s">"left"</span> <span class="na">data-content=</span><span class="s">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</span>
+											|   Popover on left
+											| <span class="nt">&lt;/button&gt;</span></code>
+											
+			
+								

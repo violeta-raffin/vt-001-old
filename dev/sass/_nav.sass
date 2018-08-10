@@ -1,0 +1,50 @@
+// Navbar
+//-------------------------------------------------
+.navbar
+    padding: .5rem 4rem
+    background-color: transparent
+    z-index: 9999
+    @include transition(0.5s)
+    .navbar-nav
+        li a
+            color: #000000  
+            font-weight: 600
+            font-size: 1.2rem 
+        .dropdown-menu
+            background: $primary-color
+            border-radius: 0
+            border: 0
+            left: -30px
+            padding: 10px 10px
+            margin-top: 20px
+            a
+                font-size: 1.2rem
+                color: #fff
+                border-bottom: 1px solid $secondary-color
+            .dropdown-item
+                &:hover,&:active,&:focus
+                    background-color: $primary-color-l
+        .dropdown-toggle::after
+            color: $primary-color
+    .navbar-brand
+        img
+            max-width: 100%
+            width: 70px
+
+.navbar-solid
+    background-color: #f9f9f9
+    @include transition(0.5s)
+
+@media (max-width: 991px)
+    .navbar
+        padding: 5px 15px
+        .navbar-collapse
+            padding: 15px
+            padding-left: 25px
+            background-color: #ffff
+            margin-top: 15px
+            border: 1px solid rgba(#383838,.5)
+    .navbar-toggler
+        border-radius: 0
+        &:focus
+            border: 1px solid rgba(#383838,.5)

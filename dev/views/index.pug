@@ -1,0 +1,252 @@
+extends master.pug
+block content
+	
+	// ==================
+	//    PAGE CONTENT   
+	// ==================
+	// Bootstrap Carousel
+
+	div#carousel-home.carousel.slide.carousel-home(data-ride="carousel")
+		.carousel-inner
+			.carousel-item.active
+				img.d-block.w-100(src="img/slider1.jpg" alt="First slide")
+			div.carousel-item
+				img.d-block.w-100(src="img/slider2.jpg" alt="Second slide")
+			a.carousel-control-prev(href="#carousel-home" role="button" data-slide="prev")
+				span.carousel-control-prev-icon(aria-hidden="true")
+				span.sr-only Previous
+			a.carousel-control-next(href="#carousel-home" role="button" data-slide="next")
+				span.carousel-control-next-icon(aria-hidden="true")
+				span.sr-only Next
+
+	// Intro Text
+	section.centered-banner
+		.container
+			.row-centered.inner.wow.fadeIn(data-wow-duration="2s")
+				h1 Beautiful Responsive
+				span.text-deco-1 BEAUTIFUL RESPONSIVE
+				p libero ex dapibus diam expound the actual teachings of the great explorer of the <br> truthlibero ex dapibus diam expound the actual teachings of the
+				a.btn.btn-primary(href="#Contact") Contact Us
+				a.btn.btn-primary(href="#Contact") Reserve here
+
+	// Boxed Items
+	section.grey-bg
+		.container
+			.row.wow.fadeIn.padding-0(data-wow-duration='2s' data-wow-delay='0.5s')
+				- var images = ['img/home-icon1.png', 'img/home-icon2.png', 'img/home-icon3.png']
+				each image in images
+					.col-xs-12.col-sm-6.col-md-4.box-item
+						.box
+							img.icon(src=image alt='Item Description')
+							h2 CupCakes
+							p
+								| Vestibulum placerat, ipsum vel mollis ornare, lisbero.
+							img.divisor(src='img/divisor.png' alt='Item Description')
+
+	// Menu Section
+	a.anchor#Menu
+	section.padding-0
+		.container-fluid
+			.row.image-and-items.menu-section.wow.fadeIn
+				.col-md-7.image.wow.fadeIn(data-wow-duration='2s' data-wow-delay='0s')
+					//- background image
+				.col-md-5.items.wow.fadeIn(data-wow-duration='2s' data-wow-delay='0s')
+					.justify-content-center.col-header
+						span.title(data-container='body' data-toggle='popover' data-trigger='hover' data-placement='left' title='PopOver Heading' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+							| Menu
+						br
+						img.divisor(src='img/divisor.png' alt='')
+						p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est impedit amet consectetur adipisicing elit.
+						- var menudata = [['img/menu-icon1.png', 'title1', 'text1', '$565'], ['img/menu-icon2.png', 'title2', 'text2', '$156'], ['img/menu-icon3.png', 'title3', 'text3', '$462']]
+						each data in menudata
+							.item-right
+								.icon
+									img(src=data[0] alt='')
+								span(data-container='body' data-toggle='popover' data-trigger='hover' data-placement='right' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+								h6.font-3.text-muted Chinese Chicken Momo
+								p libero ex dapibus diam expound the actual teachings of the great of the truthlibero  of the great of the truthlibero  of the great of the truthlibero
+
+	// Breakfast Section
+	section.padding-0
+		.container-fluid
+			.row.image-and-items.breakfast-section
+				.col-md-5.items.wow.fadeIn(data-wow-duration='2s' data-wow-delay='0s')
+					.justify-content-center.col-header
+						span.title(data-container='body' data-toggle='popover' data-trigger='hover' data-placement='left' title='PopOver Heading' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+							| Breakfast
+						br
+						img.divisor(src='img/divisor.png' alt='')
+						p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est impedit amet consectetur adipisicing elit.
+
+						- var menudata = [['title1', 'text1', '$565'], ['title2', 'text2', '$156'], ['title3', 'text3', '$462']]
+						each data in menudata
+							.item-left
+								span(data-container='body' data-toggle='popover' data-trigger='hover' data-placement='right' data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.')
+								h6.font-3.text-muted Chinese Chicken Momo
+								p libero ex dapibus diam expound the actual teachings of the great of the truthlibero  of the great of the truthlibero  of the great of the truthlibero
+								.price
+									span #{data[2]}
+				.col-md-7.image.wow.fadeIn(data-wow-duration='2s' data-wow-delay='0s')
+					// background image
+
+
+	// Parallax section
+	section.parallax-section
+		.container
+			.row-centered
+				.title
+					h1 Cheff Cuisinne
+					img(src='img/divisor-w.png' alt='')
+					p
+						| But I must explain to you how all this mistaken idea of <br>
+						| denouncing pleasure and praising pain was born.
+			.owl-carousel.carousel-multiple
+				- var multicarousel = [['img/gallery1.jpg', 'Javier Andrad', 'CHEFF INCHARGE', 'libero ex dapibus diam expound the actual teachings of the great explorer'],['img/gallery2.jpg', 'Francis MadMan', 'CHEFF', 'libero ex dapibus diam expound the actual teachings of the great explorer'],['img/gallery3.jpg', 'Gato Dumas', 'CHEFF', 'libero ex dapibus diam expound the actual teachings of the great explorer'],['img/gallery4.jpg', 'Peter Quill', 'CHEFF', 'libero ex dapibus diam expound the actual teachings of the great explorer'],['img/gallery5.jpg', 'Rocket Rackoon', 'EXPERT', 'libero ex dapibus diam expound the actual teachings of the great explorer']]
+				each multicdata in multicarousel
+					.inner
+						img(src=multicdata[0] alt='Carousel Item')
+						h3 #{multicdata[1]}
+						span.text-deco-1 #{multicdata[2]}
+						p #{multicdata[3]}
+						ul
+							li.sq-icon
+								i.fab.fa-facebook-square
+							li.sq-icon
+								i.fab.fa-twitter-square
+							li.sq-icon
+								i.fab.fa-instagram
+
+	// Sorteable Gallery
+	section
+		div.container-fluid
+			div.row.sortable-gallery
+				div.col-md-3.text-center
+					h1 Decoration
+					span.text-deco-1 GALLERY PROYECTS
+					p
+					| Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae fugit officia doloremque ipsam in possimus.
+					.sortable-gallery-filters
+						ul
+							li.active(data-filter='*') All
+							li(data-filter='.cakes') Cakes
+							li(data-filter='.brownies') Brownies
+							li(data-filter='.cupcakes') CupCakes
+				div.col-md-9
+					div.sortable-gallery-items
+						//- Array: 0 - image filename | 1: sorting class 
+						- var sorteableimages = [['img/gallery1.jpg', 'cakes'],['img/gallery2.jpg', 'cakes'],['img/gallery3.jpg', 'brownies'],['img/gallery5.jpg', 'cakes brownies cupcakes'],['img/gallery6.jpg', 'cakes brownies cupcakes'],['img/gallery5.jpg', 'cakes brownies cupcakes']]
+						each data in sorteableimages
+							div.col-xs-12.col-sm-6.col-md-6.col-lg-4.item(class=data[1])
+								figure
+									a(href=data[0])
+										img(src=data[0] alt='')
+										.overlay
+	// Pricing
+	a.anchor#Pricing
+	section.centered-banner.grey-bg
+		.container
+			.row-centered.inner.wow.fadeIn(data-wow-duration='2s')
+				h1 Our Products
+				img(src='img/divisor.png' alt='')
+				p
+					| libero ex dapibus diam expound the actual teachings of the great explorer of the <br>
+					| truthlibero ex dapibus diam expound the actual teachings of the
+			.row-centered.text-center
+				.sortable-pricing-filters
+					ul
+						li.btn.btn-primary.no-shadow.active(data-filter='.first') First
+						li.btn.btn-primary.no-shadow(data-filter='.second') Second
+			.row-centered.sortable-pricing-items
+				- var pricing = [['img/gallery1.jpg', 'Pancake', 'first'],['img/gallery2.jpg', 'Cakes', 'first'],['img/gallery3.jpg', 'Other', 'first'],['img/gallery4.jpg', 'Cakes', 'first'],['img/gallery5.jpg', 'Cakes', 'second'],['img/gallery6.jpg', 'Cakes', 'second']]
+				each data in pricing
+					.col-xs-6.col-sm-6.col-md-4.col-lg-3.item.card(class=data[2], style='width: 18rem;')
+						img.card-img-top(src=data[0] alt='Card image cap')
+						.card-body
+							h4.card-title #{data[1]}
+							span.text-deco-1 $ 150 .-
+							p.card-text Some quick example text to build on the card title.
+							a.btn.btn-primary(href='#') Order now
+
+	// Social Networks
+	div.padding-0
+		.container-fluid.social-banner
+			.row.inner
+				ul
+					li
+						.sq-icon
+							i.fab.fa-facebook-square
+					li
+						.sq-icon
+							i.fab.fa-google-plus-g
+					li
+						.sq-icon
+							i.fab.fa-twitter-square
+					li
+						.sq-icon
+							i.fab.fa-instagram
+					li
+						.sq-icon
+							i.fab.fa-youtube-square
+
+	// Newsletter Banner
+	div.padding-0.newsletter-banner
+		.container.justify-content-center
+			.row.inner
+				.col-md-4.col-left
+					img(src='img/divisor-w.png' alt='')
+					span Newsletter
+					br
+					p Subscribe &amp; Get awesome updates
+				.col-md-8.col-right
+					form.input-group.mb-3
+						input.form-control.line-input(type='text' placeholder='Enter Email Address' aria-label='Enter Email Address')
+						.input-group-append
+							button.input-group-text(type='submit') Subscribe
+
+	// Contact Section
+	a.anchor#Contact
+	section.padding-0.contact-section
+		.container-fluid
+			.row
+				.col-xs-12.col-sm-12.col-md-5.col-left
+					.col-md-12
+						h4 Reservations
+						p 4545-4545
+						img(src='img/divisor-w.png' alt='')
+					.col-md-12
+						h4 Contact Us
+						p 4545-5555 / 5487-7854
+						img(src='img/divisor-w.png' alt='')
+					.col-md-12
+						h4 Address
+						p 225 W 8th St, Laurel, DE 19956, EE. UU.
+						img(src='img/divisor-w.png' alt='')
+					.col-md-12
+						h4 E-Mail
+						p ouremail@gmail.com
+				.col-xs-12.col-sm-12.col-md-7.col-right.grey-bg
+					h1 Contact Us
+					img(src='img/divisor.png' alt='')
+					p
+						| Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum modi dignissimos excepturi accusantium nihil odio aliquid eveniet
+
+					form(method='POST')#contact-form.main-form
+						.form-group
+							input.form-control(name='name' type='text' placeholder='Your Name')
+						.form-group
+							input.form-control(name='email' type='email' placeholder='Your E-mail')
+						.form-group
+							input.form-control(name='phone' type='tel' placeholder='Your Phone')
+						.form-group
+							textarea#exampleFormControlTextarea1.form-control(name='message' rows='3' placeholder='Leave us a message')
+							small.form-text.text-muted We&apos;ll never share your data with anyone else.
+						button#submit-btn.btn.btn-primary(type='submit') Submit
+					#form-thanks.form-response
+						i.fas.fa-check.success
+						p
+							| Thank you for contacting us <br> We will get back to you soon!
+
+					#form-error.form-response
+						i.fas.fa-times.error
+						p
+							| An error has occurred, please contact support.

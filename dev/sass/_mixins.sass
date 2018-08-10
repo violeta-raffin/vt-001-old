@@ -1,0 +1,163 @@
+//------------------------------------------
+//               MIXINS                   //
+//------------------------------------------
+
+// TRANSITIONS
+//------------------------------------------
+
+@mixin transition($segs)
+	-webkit-transition: all $segs ease 0s
+	transition: all $segs ease 0s
+
+// FLEXBOX
+//------------------------------------------
+
+@mixin flex-column
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-ms-grid-row-align: center
+	align-items: center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+	-webkit-box-orient: vertical
+	-webkit-box-direction: normal
+	-ms-flex-direction: column
+	flex-direction: column
+
+@mixin flex-column-left
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-ms-grid-row-align: center
+	justify-content: center
+	-webkit-box-orient: vertical
+	-webkit-box-direction: normal
+	-ms-flex-direction: column
+	flex-direction: column
+
+@mixin flex-center
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-ms-grid-row-align: center
+	align-items: center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+
+@mixin flex-center-left
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-ms-grid-row-align: center
+	align-items: center
+
+	
+@mixin flex-center-right
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: right
+	-ms-flex-align: right
+	-ms-grid-row-align: right
+	align-items: right
+	-webkit-box-pack: end
+	-ms-flex-pack: end
+	justify-content: flex-end
+
+@mixin flex-center-grow
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-ms-grid-row-align: center
+	align-items: center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+	-ms-flex-wrap: nowrap
+	flex-wrap: nowrap
+	flex-grow: 1
+
+@mixin flex-inline-centered
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-ms-grid-row-align: center
+	align-items: center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+	flex-grow: 1
+
+@mixin flex-row-cent-wrap
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-ms-grid-row-align: center
+	align-items: center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+	flex-wrap: wrap
+
+@mixin flex-justify-center
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	-ms-grid-row-align: center
+	align-items: center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+
+  
+// DECORATIONS
+//------------------------------------------
+
+// BOX-SHADOW
+
+// box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]
+@mixin box-shadow( $horiz : 5px , $vert : 2px , $blur : 8px , $spread : -5px , $color : rgba(0,0,0,0.55))
+	-webkit-box-shadow: $horiz $vert $blur $spread $color
+	-moz-box-shadow: $horiz $vert $blur $spread $color
+	box-shadow: $horiz $vert $blur $spread $color
+
+
+// GRADIENTS
+
+@mixin black-gradient
+	background: rgba(110,109,110,1)
+	background: -moz-radial-gradient(center, ellipse cover, rgba(110,109,110,1) 0%, rgba(56,56,56,1) 100%)
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(110,109,110,1)), color-stop(100%, rgba(56,56,56,1)))
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(110,109,110,1) 0%, rgba(56,56,56,1) 100%)
+	background: -o-radial-gradient(center, ellipse cover, rgba(110,109,110,1) 0%, rgba(56,56,56,1) 100%)
+	background: -ms-radial-gradient(center, ellipse cover, rgba(110,109,110,1) 0%, rgba(56,56,56,1) 100%)
+	background: radial-gradient(ellipse at center, rgba(110,109,110,1) 0%, rgba(56,56,56,1) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6e6d6e', endColorstr='#383838', GradientType=1 )
+
+@mixin grad-radial($color1,$color2)
+	background: $color1
+	background: -moz-radial-gradient(center, ellipse cover, $color1 0%, $color2 100%)
+	background: -webkit-radial-gradient(center, ellipse cover, $color1 0%,$color2 100%)
+	background: radial-gradient(ellipse at center, $color1 0%,$color2 58%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color1, endColorstr=$color2,GradientType=1 )

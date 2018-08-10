@@ -1,0 +1,285 @@
+extends /master.pug
+block content
+	- var currentUrl = 'modal.html'
+	section
+		.container-fluid
+			.row
+				.col-md-12
+					.row
+						.col-lg-2.col-sm-3.pull-lg-9.pull-md-8
+							//- SIDEBAR
+							include ../includes/sidebar.pug
+						.col-lg-10.col-sm-9.push-lg-3.push-md-4.theme-docs.code-no-bs
+							h1 Bootstrap 4 components
+							hr
+							// Forms
+							h4 Modal
+								small 
+									a(href='https://getbootstrap.com/docs/4.1/components/modal/' target='_blank') (Official docs)
+							p 
+								| Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
+							br
+							p 
+								strong How it works
+								br
+								| Modals are built with HTML, CSS, and JavaScript.
+								br 
+								| They’re positioned over everything else in the document and remove scroll from the
+								
+								code.highlighter-rouge 
+									<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span> 
+								| so that modal content scrolls instead.
+								br
+								| Clicking on the modal “backdrop” will automatically close the modal. 
+								br
+								| Due to how HTML5 defines its semantics, the autofocus HTML attribute has no effect in Bootstrap modals. To achieve the same effect, use some custom JavaScript:
+								p
+								.panel
+									.panel-footer
+										pre
+											code.html.hljs.xml.code-bs
+												| <span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'shown.bs.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+												|  <span class="nx">$</span><span class="p">(</span><span class="s1">'#myInput'</span><span class="p">).</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'focus'</span><span class="p">)</span>
+												| <span class="p">})</span>
+						
+							.panel
+								.panel-body
+									.modal(style='position: relative;top: auto;right: auto;bottom: auto;left: auto;z-index: 1;display: block;')
+										.modal-dialog(role='document')
+											.modal-content
+												.modal-header
+													h5.modal-title Modal title here
+													button.close(type='button', data-dismiss='modal', aria-label='Close')
+														span(aria-hidden='true') ×
+												.modal-body
+													p Modal content goes here
+												.modal-footer
+													button.btn.btn-primary(type='button') Accept !
+													button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-dialog"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"document"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-content"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-header"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-title"</span>&gt;</span>Modal title here<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"close"</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">"modal"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Close"</span>&gt;</span>
+											|           <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>×<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-body"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Modal content goes here<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-footer"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>Save changes<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">"modal"</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							br
+							h4.mt-4
+								| Live example
+							.panel
+								.panel-body
+									// Button trigger modal
+									button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal')
+										| Launch demo modal
+									// Modal
+									#exampleModal.modal.fade(tabindex='-1', role='dialog')
+										.modal-dialog(role='document')
+											.modal-content
+												.modal-header
+													h5#exampleModalLabel.modal-title Send message
+													button.close(type='button', data-dismiss='modal', aria-label='Close')
+														span(aria-hidden='true') ×
+												.modal-body
+													form
+														.form-group
+															label.form-control-label(for='recipient-name') Recipient:
+															input#recipient-name.form-control(type='text')
+														.form-group
+															label.form-control-label(for='message-text') Message:
+															textarea#message-text.form-control
+												.modal-footer
+													button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+													button.btn.btn-primary(type='button') Save changes
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-comment">&lt;!-- Button trigger modal --&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"modal"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#exampleModal"</span>&gt;</span>
+											|   Launch demo modal
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| 
+											| <span class="hljs-comment">&lt;!-- Modal --&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal fade"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleModal"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-dialog"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"document"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-content"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-header"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-title"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleModalLabel"</span>&gt;</span>Send message<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"close"</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">"modal"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Close"</span>&gt;</span>
+											|           <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>×<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-body"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+											|           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
+											|             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"recipient-name"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control-label"</span>&gt;</span>Recipient:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+											|             <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"recipient-name"</span>&gt;</span>
+											|           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|           <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
+											|             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"message-text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control-label"</span>&gt;</span>Message:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+											|             <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"message-text"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+											|           <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-footer"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">"modal"</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>Save changes<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							br
+							h4.mt-4
+								| Scroll long content modal
+							.panel
+								.panel-body
+									// Button trigger modal
+									button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal2')
+										| Launch demo modal
+									// Modal
+									#exampleModal2.modal.fade(tabindex='-1', role='dialog')
+										.modal-dialog(role='document')
+											.modal-content
+												.modal-header
+													h5#exampleModalLabel.modal-title Send message
+													button.close(type='button', data-dismiss='modal', aria-label='Close')
+														span(aria-hidden='true') ×
+												.modal-body
+													p
+														| Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+													p
+														| Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+													p
+														| Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+													p
+														| Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+													p
+														| Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+													p
+														| Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+													p
+														| Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+													p
+														| Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+													p
+														| Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+													p
+														| Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+													p
+														| Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+													p
+														| Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+												.modal-footer
+													button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+													button.btn.btn-primary(type='button') Save changes
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-comment">&lt;!-- Button trigger modal --&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"modal"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#exampleModal"</span>&gt;</span>
+											|   Launch demo modal
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											br 
+											| <span class="hljs-comment">&lt;!-- Modal --&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal fade"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleModal"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-dialog"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"document"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-content"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-header"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-title"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleModalLabel"</span>&gt;</span>Send message<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"close"</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">"modal"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Close"</span>&gt;</span>
+											|           <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>×<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-body"</span>&gt;</span>
+											|         ...
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-footer"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">"modal"</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>Save changes<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							br
+							h4.mt-4
+								| Modal sizing
+							.panel
+								.panel-body
+									// Large modal
+									button.btn.btn-primary(data-toggle='modal', data-target='#exampleModal3') Large modal
+									#exampleModal3.modal.fade(tabindex='-1', role='dialog')
+										.modal-dialog.modal-lg
+											.modal-content
+												.modal-header
+													h5#exampleModalLabel.modal-title Large modal
+													button.close(type='button', data-dismiss='modal', aria-label='Close')
+														span(aria-hidden='true') ×
+												.modal-body
+													form
+														.form-group
+															label.form-control-label(for='recipient-name') Recipient:
+															input#recipient-name.form-control(type='text')
+														.form-group
+															label.form-control-label(for='message-text') Message:
+															textarea#message-text.form-control
+												.modal-footer
+													button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+													button.btn.btn-primary(type='button') Save changes
+									// Small modal
+									button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal4') Small modal
+									#exampleModal4.modal.fade(tabindex='-1', role='dialog')
+										.modal-dialog.modal-sm
+											.modal-content
+												.modal-header
+													h5#exampleModalLabel.modal-title Small modal
+													button.close(type='button', data-dismiss='modal', aria-label='Close')
+														span(aria-hidden='true') ×
+												.modal-body
+													form
+														.form-group
+															label.form-control-label(for='recipient-name') Recipient:
+															input#recipient-name.form-control(type='text')
+														.form-group
+															label.form-control-label(for='message-text') Message:
+															textarea#message-text.form-control
+												.modal-footer
+													button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+													button.btn.btn-primary(type='button') Save changes
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-comment">&lt;!-- Large modal --&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"modal"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#exampleModal"</span>&gt;</span>Large modal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											br 
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal fade"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleModal"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-dialog modal-lg"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-content"</span>&gt;</span>
+											|       ...
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											br
+											| <span class="hljs-comment">&lt;!-- Small modal --&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"modal"</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">"#exampleModal2"</span>&gt;</span>Small modal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											br
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal fade"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"dialog"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleModal2"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-dialog modal-sm"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"modal-content"</span>&gt;</span>
+											|       ...
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

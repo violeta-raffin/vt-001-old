@@ -1,0 +1,23 @@
+// Responsive NavBar
+nav.navbar.navbar-expand-lg.navbar-light.fixed-top
+    a.navbar-brand(href='/index.html')
+        img(src="/img/logo.png", alt="Logo")
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+            li.nav-item
+                a(href="/index.html").nav-link Home
+            li.nav-item
+                a(href="/index.html#Menu").nav-link Menu
+            li.nav-item
+                a(href="/index.html#Pricing").nav-link Pricing
+            li.nav-item
+                a(href="/index.html#Contact").nav-link Reservations
+            li.nav-item
+                a(href="/index.html#Contact").nav-link Contact Us
+            li.nav-item.dropdown
+                a(href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").nav-link.dropdown-toggle Components
+                div.dropdown-menu
+                    a(href="/theme-components.html").dropdown-item Theme Components
+                    a(href="/docs/docs.html").dropdown-item Bootstrap Components

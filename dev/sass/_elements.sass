@@ -1,0 +1,313 @@
+// Carousel full screen
+.carousel-home
+    border-bottom: 4px solid #000000
+    z-index: 999
+    .carousel-item
+        max-height: 650px        
+        min-width: 100%
+
+@media (max-width: 1500px)
+    .carousel-home
+        .carousel-item
+            max-height: 450px        
+            min-width: 100%
+
+// Carousel multiple items with text
+.carousel-multiple
+    .owl-item
+        text-align: center
+        img
+            max-width: 100%
+    .inner
+        background: #fff
+        padding: 10px
+        p,h3
+            color: #000000
+        ul
+            list-style: none
+            margin-top: 20px
+            li
+                display: inline
+                color: #000000
+
+
+.sortable-gallery
+    .sortable-gallery-filters
+        ul li
+            font-family: $font2
+            font-size: 2rem
+            border-bottom: 1px solid transparent
+            @include transition(0.2s)
+            &:hover
+                cursor: pointer
+                border-bottom: 1px solid #ccc
+    .sortable-gallery-items
+        .item
+            position: relative
+            img
+                max-width: 100%
+            .overlay
+                opacity: 0
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-color: rgba(#fff, .5)
+                @include transition(0.2s)
+            &:hover
+                .overlay
+                    cursor: pointer
+                    opacity: 1
+
+// Containers
+//-------------------------------------------------
+
+.centered-banner .inner
+    text-align: center
+
+.content-box
+    h1.title
+        font-family: $font2 !important
+        margin-top: 0
+    h3
+        font-size: 1.5rem
+        font-family: $font3
+        font-weight: 600
+    p.sub-title
+        font-family: $font3
+        font-size: 1rem
+        margin-top: 0
+    p.muted
+        font-family: $font3
+        font-size: 1rem
+        margin-top: 0
+        color: #5a5a5a
+    p.strong
+        font-weight: 400
+    hr
+        margin-top: 50px
+
+.elem-example
+    margin-bottom: 20px
+    span,a,button
+        margin: 2px
+    
+    
+    
+
+// Items
+//-------------------------------------------------
+
+// Wide section with info in one column and a full image in another column
+.image-and-items
+    padding: 20px 0
+    .items
+        padding: 0 30px
+        .col-header
+            text-align: center
+            .title
+                font-size: 5rem
+                font-family: $font2
+                margin: 0
+                &:hover
+                    cursor: pointer  
+            .divisor
+                margin-top: -25px
+        .item-left,.item-right
+            position: relative
+            p,h6
+                margin: 0
+            p
+                border-bottom: 1px solid #ccc
+                font-size: 1rem
+                padding-bottom: 5px
+                margin-bottom: 20px
+            h6
+                font-size: 1.1rem
+                margin-bottom: 5px
+        .item-right
+            padding-left: 50px
+            .icon
+                position: absolute
+                top: 0
+                left: 0
+                img
+                    width: 40px
+                    max-width: 100%
+        .item-left
+            padding-right: 100px
+            .price
+                position: absolute
+                top: 5px
+                right: 0
+                span
+                    font-size: 3.5rem
+
+.box-item
+    text-align: center
+    margin: 10px 0
+    h2,p
+        color: #000
+    h2
+        margin-top: 10px
+        margin-bottom: 5px
+    p
+        line-height: 1.4rem
+    img.icon
+        max-width: 70px
+    img.divisor
+        width: 100px
+    .box
+        padding: 40px 20px
+        transform: translateY(0)
+        @include transition(1s)
+        &:hover
+            transform: translateY(-5px)
+            background-color: #ffff
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1)
+
+    
+// Decorations
+//-------------------------------------------------
+
+.sq-icon
+    padding: 8px 11px 7px
+    border: 1px solid #000000
+    font-size: 1.5rem
+    margin: 3px
+    @include transition(0.2s)
+    transform: translateY(0)
+    &:hover
+        transform: translateY(-2px)
+        color: #2d2d2d
+        cursor: pointer
+        box-shadow: 7px 8px 21px rgba(#383838,.5)
+
+.sq-icon-big
+    padding: 10px 20px 7px
+    border: 1px solid #000000
+    font-size: 2rem
+    margin: 3px
+    @include transition(0.2s)
+    &:hover
+        color: #2d2d2d
+        cursor: pointer
+        box-shadow: 5px 5px #ccc
+        
+.light-br
+    border-top: 1px solid #ccc
+
+.popover
+    background: #fff
+    border-radius: 0
+    border: 1px solid #000000
+    box-shadow: 3px 3px #000000
+    margin: 10px
+    font-family: $font3
+    // .arrow:after
+    //     border-left-color: #000000
+    .arrow:after
+        border-right-color: #000000
+        border-left-color: #000000
+    .popover-body
+        padding: 2px 10px
+    .popover-header
+        font-family: $font2
+        font-size: 1.5rem
+        background: #000000
+        border-radius: 0
+        color: #fff
+        margin: 0
+        margin-bottom: 5px
+
+
+// Texts
+//-------------------------------------------------
+
+.text-muted
+    color: #a9a9a9 !important
+
+.s-font 
+    font-family: $font3
+
+.udl-big-title
+    font-family: $font3
+    font-size: 2rem
+    margin-bottom: 20px
+    span
+        border-bottom: 1px solid #ccc
+    
+.text-deco-1
+    color: #383838
+    border-top: 1px solid rgba(#000000,.4)
+    border-bottom: 1px solid rgba(#000000,.4)
+    font-family: $font3
+    padding: 4px 0 1px
+    font-size: 1.1rem
+    margin-bottom: 10px
+
+.text-deco-1-white
+    color: #fff
+    border-top: 1px solid #ffffff
+    border-bottom: 1px solid #ffffff
+    font-family: $font3
+    padding: 4px 0 1px
+    font-size: 1.1rem
+    margin-bottom: 10px
+
+
+// Forms
+//-------------------------------------------------
+
+.form-group,.form-control 
+    input,textarea,select
+        border: 0
+        border-radius: 0 
+        box-shadow: 0 0 transparent
+        background: transparent
+        border-bottom: 1px solid #909090
+        text-align: center
+        font-size: 1.3rem
+        color: #383838
+    input[type='file']
+        border: 0
+        background: #fff
+
+.form-control:focus
+    box-shadow: 0 0 transparent
+    border-bottom: 1px solid #000
+    background: transparent
+
+.form-response
+    text-align: center
+    padding: 20px
+    margin-top: 5px
+    i
+        font-size: 3rem
+    i.success
+        color: green
+    i.error
+        color: red
+    p
+        font-weight: 400
+        font-size: 2rem
+        line-height: 2.5rem
+
+// Elements
+//-----------------------------------------------    
+#go-to-top
+    padding: 4px 9px
+    position: fixed
+    right: 20px
+    bottom: 20px
+    border: 1px solid #fff
+    background-color: #000
+    width: 40px
+    height: 40px
+    color: #fff
+    font-size: 2rem
+    z-index: 99999
+    &:hover,&:active,&:focus
+        color: #fff
+        cursor: pointer

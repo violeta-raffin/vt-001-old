@@ -1,0 +1,293 @@
+extends /master.pug
+block content
+	- var currentUrl = 'call-to-action.html'
+	section
+		.container-fluid
+			.row
+				.col-md-12
+					.row
+						.col-lg-2.col-sm-3.pull-lg-9.pull-md-8
+							//- SIDEBAR
+							include ../includes/sidebar.pug
+						.col-lg-10.col-sm-9.push-lg-3.push-md-4.theme-docs.code-no-bs
+							h1 Bootstrap 4 components
+							hr
+							// Alerts
+							a#Badges.anchor
+							h3 Buttons
+							h5
+								| Default buttons
+
+							.panel
+								.panel-body
+									button.btn.btn-primary.m-1
+										| Primary
+									button.btn.btn-secondary.m-1
+										| Secondary
+									button.btn.btn-success.m-1
+										| Success
+									button.btn.btn-info.m-1
+										| Info
+									button.btn.btn-warning.m-1
+										| Warning
+									button.btn.btn-danger.m-1
+										| Danger
+									button.btn.btn-light.m-1
+										| Light
+									button.btn.btn-dark.m-1
+										| Dark
+									button.btn.btn-link Link
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-success"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-info"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-warning"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-danger"</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-light"</span>&gt;</span>Light<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-dark"</span>&gt;</span>Dark<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-link"</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+							h5
+								| Size small 
+								small
+									code .btn-sm
+							.panel
+								.panel-body
+									button.btn.btn-primary.btn-sm.m-1
+										| Primary
+									button.btn.btn-secondary.btn-sm.m-1
+										| Secondary
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-sm btn-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-sm btn-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+							h5
+								| Size large 
+								small
+									code .btn-lg
+							.panel
+								.panel-body
+									button.btn.btn-primary.btn-lg.m-1
+										| Primary
+									button.btn.btn-secondary.btn-lg.m-1
+										| Secondary
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-lg btn-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-lg btn-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+							br
+							h4.mt-3
+								| Outline buttons 
+								small
+									code .btn-outline-*
+							.panel
+								.panel-body
+									button.btn.btn-outline-primary.m-1
+										| Primary
+									button.btn.btn-outline-secondary.m-1
+										| Secondary
+									button.btn.btn-outline-success.m-1
+										| Success
+									button.btn.btn-outline-info.m-1
+										| Info
+									button.btn.btn-outline-warning.m-1
+										| Warning
+									button.btn.btn-outline-danger.m-1
+										| Danger
+									button.btn.btn-outline-light.m-1
+										| Light
+									button.btn.btn-outline-dark.m-1
+										| Dark
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-success"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-info"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-warning"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-danger"</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-light"</span>&gt;</span>Light<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-dark"</span>&gt;</span>Dark<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+							h5
+								| Size small 
+								small
+									code .btn-sm
+							.panel
+								.panel-body
+									button.btn.btn-outline-primary.btn-sm.m-1
+										| Primary
+									button.btn.btn-outline-secondary.btn-sm.m-1
+										| Secondary
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-sm btn-outline-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-sm btn-outline-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+							h5
+								| Size large 
+								small
+									code .btn-lg
+							.panel
+								.panel-body
+									button.btn.btn-outline-primary.btn-lg.m-1
+										| Primary
+									button.btn.btn-outline-secondary.btn-lg.m-1
+										| Secondary
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-lg btn-outline-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-lg btn-outline-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+							br
+							h4.mt-3
+								| Pill buttons 
+								small
+									code .btn-pill
+							.panel
+								.panel-body
+									button.btn-pill.btn-pill-primary.m-1
+										| Primary
+									button.btn-pill.btn-pill-secondary.m-1
+										| Secondary
+									button.btn-pill.btn-pill-dark.m-1
+										| Dark
+									button.btn-pill.btn-pill-success.m-1
+										| Success
+									button.btn-pill.btn-pill-info.m-1
+										| Info
+									button.btn-pill.btn-pill-warning.m-1
+										| Warning
+									button.btn-pill.btn-pill-danger.m-1
+										| Danger
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-pill btn-pill-lg btn-pill-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-pill btn-pill-lg btn-pill-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+							h5
+								| Size small 
+								small
+									code .btn-pill-sm
+							.panel
+								.panel-body
+									button.btn-pill.btn-pill-primary.btn-pill-sm.m-1
+										| Primary
+									button.btn-pill.btn-pill-secondary.btn-pill-sm.m-1
+										| Secondary
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-pill btn-pill-sm btn-pill-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-pill btn-pill-sm btn-pill-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+							h5
+								| Size large 
+								small
+									code .btn-pill-lg
+							.panel
+								.panel-body
+									button.btn-pill.btn-pill-primary.btn-pill-lg.m-1
+										| Primary
+									button.btn-pill.btn-pill-secondary.btn-pill-lg.m-1
+										| Secondary
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-pill btn-pill-lg btn-pill-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-pill btn-pill-lg btn-pill-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+							br
+							h4.mt-3
+								| Shadow buttons 
+								small
+									code .btn-shadow
+							.panel
+								.panel-body
+									button.btn-shadow.btn-shadow-primary.m-1
+										| Primary
+									button.btn-shadow.btn-shadow-secondary.m-1
+										| Secondary
+									button.btn-shadow.btn-shadow-dark.m-1
+										| Dark
+									button.btn-shadow.btn-shadow-success.m-1
+										| Success
+									button.btn-shadow.btn-shadow-info.m-1
+										| Info
+									button.btn-shadow.btn-shadow-warning.m-1
+										| Warning
+									button.btn-shadow.btn-shadow-danger.m-1
+										| Danger
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-dark"</span>&gt;</span>Dark<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-success"</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-info"</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-warning"</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-danger"</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+							h5
+								| Size small 
+								small
+									code .btn-shadow-sm
+							.panel
+								.panel-body
+									button.btn-shadow.btn-shadow-sm.btn-shadow-primary.m-1
+										| Primary
+									button.btn-shadow.btn-shadow-sm.btn-shadow-secondary.m-1
+										| Secondary
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-sm btn-shadow-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-sm btn-shadow-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+							h5
+								| Size large 
+								small
+									code .btn-shadow-lg
+							.panel
+								.panel-body
+									button.btn-shadow.btn-shadow-lg.btn-shadow-primary.m-1
+										| Primary
+									button.btn-shadow.btn-shadow-lg.btn-shadow-secondary.m-1
+										| Secondary
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-lg btn-shadow-primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-lg btn-shadow-secondary"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code>
+							br
+							h4.mt-3
+								| Button block 
+								small
+									code .btn-block
+							.panel
+								.panel-body
+									button.btn.btn-primary.btn-block.m-1
+										| Default primary
+									button.btn.btn-secondary.btn-block.m-1
+										| Default secondary
+									button.btn-pill.btn-pill-primary.btn-block.m-1.mt-4
+										| Pill primary
+									button.btn-pill.btn-pill-secondary.btn-block.m-1
+										| Pill secondary
+									button.btn-shadow.btn-shadow-primary.btn-block.m-1.mt-4
+										| Shadow primary
+									button.btn-shadow.btn-shadow-secondary.btn-block.m-1
+										| Shadow secondary
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-shadow-primary btn-block"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-shadow-secondary btn-block"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											br 
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-pill btn-pill-primary btn-block"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-pill btn-pill-secondary btn-block"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											br
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-primary btn-block"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-shadow btn-shadow-secondary btn-block"</span>&gt;</span>Secondary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>

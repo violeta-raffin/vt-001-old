@@ -1,0 +1,298 @@
+extends /master.pug
+block content
+	- var currentUrl = 'buttons-group.html'
+	section
+		.container-fluid
+			.row
+				.col-md-12
+					.row
+						.col-lg-2.col-sm-3.pull-lg-9.pull-md-8
+							//- SIDEBAR
+							include ../includes/sidebar.pug
+						.col-lg-10.col-sm-9.push-lg-3.push-md-4.theme-docs.code-no-bs
+							h1 Bootstrap 4 components
+							hr
+							// Button Group
+							h4 Button Grpup
+								small 
+									a(href='href="https://getbootstrap.com/docs/4.1/components/button-group/' target='_blank') (Official docs)
+							p
+								| Group a series of buttons together on a single line with the button group 
+								small
+									code .btn-group
+							br
+							h4.mt-2 Default buttons
+							.panel
+								.panel-body
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-secondary(type='button') Left
+										button.btn.btn-secondary(type='button') Middle
+										button.btn.btn-secondary(type='button') Right
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-primary(type='button') Left
+										button.btn.btn-primary(type='button') Middle
+										button.btn.btn-primary(type='button') Right
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-success(type='button') Left
+										button.btn.btn-success(type='button') Middle
+										button.btn.btn-success(type='button') Right
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-info(type='button') Left
+										button.btn.btn-info(type='button') Middle
+										button.btn.btn-info(type='button') Right
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-warning(type='button') Left
+										button.btn.btn-warning(type='button') Middle
+										button.btn.btn-warning(type='button') Right
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-danger(type='button') Left
+										button.btn.btn-danger(type='button') Middle
+										button.btn.btn-danger(type='button') Right
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Basic example"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>Middle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Basic example"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>Middle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							br
+							h4.mt-2 Outline buttons
+							.panel
+								.panel-body
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-outline-secondary(type='button') Left
+										button.btn.btn-outline-secondary(type='button') Middle
+										button.btn.btn-outline-secondary(type='button') Right
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-outline-primary(type='button') Left
+										button.btn.btn-outline-primary(type='button') Middle
+										button.btn.btn-outline-primary(type='button') Right
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-outline-success(type='button') Left
+										button.btn.btn-outline-success(type='button') Middle
+										button.btn.btn-outline-success(type='button') Right
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-outline-info(type='button') Left
+										button.btn.btn-outline-info(type='button') Middle
+										button.btn.btn-outline-info(type='button') Right
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-outline-warning(type='button') Left
+										button.btn.btn-outline-warning(type='button') Middle
+										button.btn.btn-outline-warning(type='button') Right
+									.btn-group.m-1(role='group', aria-label='Basic example')
+										button.btn.btn-outline-danger(type='button') Left
+										button.btn.btn-outline-danger(type='button') Middle
+										button.btn.btn-outline-danger(type='button') Right
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Basic example"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-secondary"</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-secondary"</span>&gt;</span>Middle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-secondary"</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Basic example"</span>&gt;</span>
+											|  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-primary"</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-primary"</span>&gt;</span>Middle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-outline-primary"</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							br
+							h4.mt-2 Button Toolbar
+							.panel
+								.panel-body
+									.btn-toolbar.justify-content-between(role='toolbar', aria-label='Toolbar with button groups')
+										.btn-group.mr-2(role='group', aria-label='First group')
+											button.btn.btn-secondary(type='button')
+												i.ion-arrow-move(style='font-size: 19px;')
+											button.btn.btn-secondary(type='button')
+												i.ion-document(style='font-size: 19px;')
+											button.btn.btn-secondary(type='button')
+												i.ion-share(style='font-size: 19px;')
+										.btn-group.mr-2(role='group', aria-label='Second group')
+											button.btn.btn-secondary(type='button')
+												i.ion-gear-a
+												|                     Settings
+											button.btn.btn-secondary(type='button')
+												i.ion-funnel
+												|                     Filter
+											button.btn.btn-secondary(type='button')
+												i.ion-power
+												|                     Turn on
+										.input-group
+											span#btnGroupAddon.input-group-addon @
+											input.form-control(type='text', placeholder='Input group example')
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-toolbar justify-content-between"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"toolbar"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Toolbar with button groups"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group mr-2"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"First group"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-arrow-move"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-document"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-share"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group mr-2"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Second group"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-gear-a"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|       Settings
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-funnel"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|       Filter
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-power"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|       Turn on
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-group"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-group-addon"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btnGroupAddon"</span>&gt;</span>@<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Input group example"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							br
+							h4.mt-3 Nesting
+							p.mt-3
+								| Place a 
+								code .btn-group
+								|  within another 
+								code .btn-group
+								|  when you want dropdown menus mixed with a series of buttons.
+							.panel
+								.panel-body
+									.btn-group(role='group')
+										button.btn.btn-secondary(type='button')
+											i.ion-calendar
+										button.btn.btn-secondary(type='button')
+											i.ion-person-stalker
+										.btn-group(role='group')
+											button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown')
+												i.ion-gear-a
+												|                     Actions
+											.dropdown-menu
+												a.dropdown-item(href='http://spacialtheme.herokuapp.com/2.6/docs/button-groups.html#')
+													i.ion-image
+													|                       Edit image
+												a.dropdown-item(href='http://spacialtheme.herokuapp.com/2.6/docs/button-groups.html#')
+													i.ion-fork-repo
+													|                       Fork repository
+												a.dropdown-item(href='http://spacialtheme.herokuapp.com/2.6/docs/button-groups.html#')
+													i.ion-merge
+													|                       Merge changes
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-calendar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-person-stalker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											br
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary dropdown-toggle"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"dropdown"</span>&gt;</span>
+											|       Actions
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-menu"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|         Edit image
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-fork-repo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|         Fork repository
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-merge"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|         Merge changes
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+							br
+							h4.mt-3 Vertical variation
+							p.mt-3
+								| Make a set of buttons appear vertically stacked by using 
+								code .btn-group-vertical
+								|  instead of 
+								code .btn-group
+								| .
+							.panel
+								.panel-body
+									.btn-group-vertical(role='group')
+										button.btn.btn-secondary(type='button')
+											i.ion-calendar.mr-1
+											|                   Button
+										button.btn.btn-secondary(type='button')
+											i.ion-person-stalker.mr-1
+											|                   Button
+										.btn-group(role='group')
+											button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown')
+												i.ion-gear-a.mr-1
+												|                     Actions
+											.dropdown-menu
+												a.dropdown-item(href='http://spacialtheme.herokuapp.com/2.6/docs/button-groups.html#')
+													i.ion-image
+													|                       Edit image
+												a.dropdown-item(href='http://spacialtheme.herokuapp.com/2.6/docs/button-groups.html#')
+													i.ion-fork-repo
+													|                       Fork repository
+												a.dropdown-item(href='http://spacialtheme.herokuapp.com/2.6/docs/button-groups.html#')
+													i.ion-merge
+													|                       Merge changes
+										button.btn.btn-secondary(type='button')
+											i.ion-share.mr-1
+											|                   Button
+										button.btn.btn-secondary(type='button')
+											i.ion-power.mr-1
+											|                   Button
+								.panel-footer
+									pre
+										code.html.hljs.xml
+											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group-vertical"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-calendar"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|     Button
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-person-stalker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|     Button
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| 
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-group"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary dropdown-toggle"</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">"dropdown"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-gear-a"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|       Actions
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-menu"</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-image"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|         Edit image
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-fork-repo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|         Fork repository
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|       <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-item"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
+											|         <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-merge"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|         Merge changes
+											|       <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+											|   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-secondary"</span>&gt;</span>
+											|     <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ion-share"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+											|     Button
+											|   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
